@@ -1,0 +1,204 @@
+/* =============================================
+   TRANSACTION LIST
+   ============================================= */
+
+.tx-list-card {
+  background: #1a2332;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 28px;
+}
+
+.tx-list-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tx-list-card__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.tx-list-card__count {
+  font-size: 13px;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.tx-list-card__empty {
+  color: #475569;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 15px;
+}
+
+/* ---------- Table ---------- */
+
+.tx-table-wrapper {
+  overflow-x: auto;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tx-table thead th {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 16px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+}
+
+.tx-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  vertical-align: middle;
+}
+
+.tx-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Name cell */
+
+.tx-row__name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tx-row__icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.tx-row__name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.tx-row__note {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.tx-row__category {
+  font-size: 13px;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.tx-row__date {
+  font-size: 13px;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+/* Amount */
+
+.tx-row__amount {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tx-row__amount--income {
+  color: #10b981;
+}
+
+.tx-row__amount--expense {
+  color: #ef4444;
+}
+
+/* Action buttons */
+
+.tx-row__actions {
+  display: flex;
+  gap: 6px;
+}
+
+.tx-row__btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+
+.tx-row__btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tx-row__btn--confirm {
+  border-color: #ef4444;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .tx-table thead {
+    display: none;
+  }
+
+  .tx-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 8px;
+    align-items: center;
+  }
+
+  .tx-table tbody td {
+    padding: 0;
+    border: none;
+  }
+
+  .tx-table tbody td:first-child {
+    flex: 1 1 100%;
+  }
+
+  .tx-table tbody td:last-child {
+    margin-left: auto;
+  }
+}
+

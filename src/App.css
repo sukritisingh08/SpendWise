@@ -1,0 +1,25 @@
+/* =============================================
+   APP LAYOUT
+   ============================================= */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 32px 36px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px 16px;
+  }
+}
